@@ -1,6 +1,19 @@
 import React from 'react'
+import toast from 'react-hot-toast';
 // import banner from "../../public/Banner.jpg"
 function Banner() {
+  const GetStarted=()=>{
+    
+    try {
+      
+        toast.success("Get started");
+      
+      
+      
+    } catch (error) {
+      toast.error("error"+error);
+    }
+  };
   return (
     <>
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row">
@@ -18,7 +31,8 @@ function Banner() {
             <input type="text" className="grow" placeholder="Email" />
         </label>
         </div>
-        <button className="btn btn-secondary mt-6 mb-5">Secondary</button>
+        <button className="btn btn-secondary mt-6 mb-5"
+        onClick={GetStarted}>get started</button>
       
         </div>
         <div className=" w-full md:w-1/2 order-1 md:order-2">
